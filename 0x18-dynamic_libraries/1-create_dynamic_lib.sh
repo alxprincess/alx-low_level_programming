@@ -1,6 +1,5 @@
 #!/bin/bash
 
-gcc -Wall -pedantic -Werror -Wextra -c *.c
+c_files=$(ls *.c)
 
-gcc -shared -o liball.so *.o
-rm *.o
+gcc -Wall -pedantic -Werror -Wextra -shared -fPIC -o liball.so $c_files
